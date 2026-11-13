@@ -2,8 +2,13 @@ name: Build desktop apps
 on: { workflow_dispatch: {}, push: { tags: ['v*'] } }
 jobs:
   build:
-    strategy: { matrix: { os: [windows-latest, macos-latest, ubuntu-latest] } }
+    strategy:
+      fail-fast: false
+      matrix: { os: [windows-latest, macos-latest, ubuntu-latest] }
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: PepelDesktop
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -14,6 +19,6 @@ jobs:
         with:
           name: pepel-${{ matrix.os }}
           path: |
-            dist/*.exe
-            dist/*.dmg
-            dist/*.AppImage
+            PepelDesktop/dist/*.exe
+            PepelDesktop/dist/*.dmg
+            PepelDesktop/dist/*.AppImage
