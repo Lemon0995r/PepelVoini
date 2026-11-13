@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Пепел войны</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="cv" width="480" height="270"></canvas>
+  <canvas id="tx" style="position:absolute;pointer-events:none"></canvas>
+  <div id="hud"></div>
+  <div id="toast"></div>
+  <div id="ui"></div>
+  <div id="touch">
+    <div id="stick"><div id="knob"></div></div>
+    <div id="tbtns">
+      <button data-k="menu">☰</button>
+      <button data-k="s1">1</button>
+      <button data-k="s2">2</button>
+      <button data-k="s3">3</button>
+      <button data-k="s4">4</button>
+      <button data-k="pot">♥</button>
+      <button data-k="use">E</button>
+      <button data-k="roll">⤼</button>
+      <button data-k="atk" class="big">⚔</button>
+    </div>
+  </div>
+</div>
+<script src="js/util.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/data.js"></script>
+<script src="js/story.js"></script>
+<script src="js/world.js"></script>
+<script src="js/world2.js"></script>
+<script src="js/deco.js"></script>
+<script src="js/arena.js"></script>
+<script src="js/shape.js"></script>
+<script src="js/secrets.js"></script>
+<script src="js/game.js"></script>
+<script src="js/render.js"></script>
+<script src="js/anim.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/items2.js"></script>
+<script src="js/items3.js"></script>
+<script src="js/quests.js"></script>
+<script src="js/combat2.js"></script>
+<script src="js/boss.js"></script>
+<script src="js/boss2.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ui2.js"></script>
+<script src="js/systems.js"></script>
+<script src="js/systems_ui.js"></script>
+<script src="js/minigames.js"></script>
+<script src="js/town.js"></script>
+<script src="js/main.js"></script>
+<script>
+if (typeof G === 'undefined' || typeof UI === 'undefined') { document.body.style.cssText = 'background:#000;color:#fff;font:20px sans-serif;padding:40px;text-align:center'; document.body.innerHTML = '<h1>ПЕПЕЛ ВОЙНЫ</h1><p>Файлы игры не найдены.<br>Распакуй архив ПОЛНОСТЬЮ (правый клик → «Извлечь всё») и открой index.html из распакованной папки.</p>'; }
+</script>
+</body>
+</html>

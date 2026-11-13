@@ -1,0 +1,22 @@
+{
+  "name": "pepel-voiny",
+  "version": "1.0.0",
+  "description": "Пепел войны — 2D pixel-art action RPG",
+  "author": "Артём",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --game=main",
+    "start:ctf": "electron . --game=ctf",
+    "dist": "electron-builder"
+  },
+  "devDependencies": { "electron": "^33.0.0", "electron-builder": "^25.0.0" },
+  "build": {
+    "appId": "ru.pepel.voiny",
+    "productName": "Пепел войны",
+    "files": ["main.js", "app/**/*", "package.json"],
+    "win": { "target": ["nsis", "portable"] },
+    "mac": { "target": ["dmg"], "category": "public.app-category.games" },
+    "linux": { "target": ["AppImage"], "category": "Game" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
